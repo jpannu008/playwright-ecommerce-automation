@@ -10,11 +10,11 @@ TypeScript + Playwright test suite for the public SauceDemo practice store: http
 - Successful checkout journey
 
 ## Setup
-Requires Node.js 18+.
+Requires Node.js 20 or later.
 
 ```bash
-npm install
-npx playwright install
+npm ci
+npx playwright install chromium
 ```
 
 ## Run
@@ -36,5 +36,15 @@ These credentials are only for the public practice site. Demo-site behavior can 
 - Independent test cases
 - HTML report, screenshots and trace on failure
 
-## Portfolio evidence
-After executing the suite, add your own report screenshots under `evidence/`. This project does not claim production coverage, payment integration testing, security testing or accessibility certification.
+## Checkout case study
+
+[Read the checkout case study](case-study/README.md) for the scope, two reproducible findings, recorded results, and the release recommendation.
+
+To rerun just the two findings and generate screenshot attachments in the HTML report:
+
+```bash
+npx playwright test tests/checkout-findings.spec.ts
+npm run report
+```
+
+The two repro tests assert the behavior described in the findings. If the demo fixes either issue, its repro test should fail and the report should be reviewed.

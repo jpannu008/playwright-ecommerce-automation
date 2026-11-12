@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "environment": "jsdom with the public SauceDemo JavaScript bundle",
+  "bundle": "https://www.saucedemo.com/assets/index-DnLqFcJI.js",
+  "bundleSha256": "2633e5d5739c4aaca3893a9bd70c56b45186dd5a0f00985b8ce66fc044289918",
+  "observations": {
+    "QA-01": {
+      "cartItems": 0,
+      "total": "Total: $0.00",
+      "confirmation": "Thank you for your order!"
+    },
+    "QA-02": {
+      "blankInputMessage": "Error: First Name is required",
+      "submitted": "   ",
+      "reached": "/checkout-step-two.html"
+    },
+    "Control": {
+      "cartItems": 1,
+      "confirmation": "Thank you for your order!"
+    }
+  }
+}
