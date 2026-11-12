@@ -18,3 +18,5 @@ I used the `standard_user` account and synthetic contact details. The recorded r
 ## Release recommendation
 
 For a real store with the same behavior, I'd hold checkout sign-off until an empty cart can no longer reach confirmation. The retest should cover both the cart button and direct navigation to checkout. I’d also trim the first name before validating it, then rerun the blank, spaces-only, and valid-name cases. Once both fixes are in, rerun a normal one-item order through confirmation.
+
+The [Chromium run on GitHub Actions](https://github.com/jpannu008/playwright-ecommerce-automation/actions/runs/43269942317) reproduced both findings. The `checkout-qa-report` artifact contains the screenshot attachments for each repro.
